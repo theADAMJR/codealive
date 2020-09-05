@@ -30,15 +30,7 @@ export default class EmailService {
   </style>`;
 
   constructor() {
-    this.transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: config.emailAuth.user,
-        pass: config.emailAuth.pass,
-      },
-    });  
+    this.transporter = nodemailer.createTransport(config.email);
   }
 
   sendWelcomeEmail(savedEmail: EmailDocument) {
