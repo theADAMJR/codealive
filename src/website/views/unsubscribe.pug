@@ -9,7 +9,7 @@ html(lang="en")
   body
     .jumbotron.text-center.bg-transparent.text-light
       img.mb-2(src='/img/icon.png')
-      h1.display-4 Leave pug mailing list.
+      h1.display-4 Leave our mailing list.
       |
       button.subscribe-button.center-content
         span.button-description Unsubscribe
@@ -17,7 +17,7 @@ html(lang="en")
         form(action='/unsubscribe', method='GET')
           .form-header
             | Newsletter
-          .description Leave pug mailing list.
+          .description Leave our mailing list.
           input#email(type='email', placeholder='Email', name='email', value=email)
           alert#formError.alert-danger
           span.confirm-button Unsubscribe
