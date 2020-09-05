@@ -9,7 +9,8 @@ html(lang="en")
   body
     .jumbotron.text-center.bg-transparent.text-light
       img.mb-2(src='/img/icon.png')
-      h1.display-4 Join the mailing list.
+      h1.display-4 Learn to Code Online
+      p.lead Quality online coding courses. Learn to code online with CodeAlive. </br>Coming soon...
       |
       button.subscribe-button.center-content
         span.button-description Subscribe
@@ -17,10 +18,10 @@ html(lang="en")
         form(action='/subscribe', method='POST')
           .form-header
             | Newsletter
-          .description Join the mailing list
+          .description Join our mailing list
             div.badge.badge-success.ml-2 EARLY ACCESS
-          input#name(type='text', placeholder='Name', name='')
-          input#email(type='email', placeholder='Email', name='')
+          input#name(type='text', placeholder='Name', name='name')
+          input#email(type='email', placeholder='Email', name='_id')
           alert#formError.alert-danger
           span.confirm-button Subscribe
     include includes/footer

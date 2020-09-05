@@ -12,14 +12,7 @@ const toggleClasses = () => {
     document.body.classList.toggle('colorful');
 }
 
-$('.confirm-button').on('click', () => {
-    const body = {
-        _id: $('#email').val(),
-        name: $('#name').val()
-    };
-
-    $.post('/subscribe', body, () => window.location.replace('/subscribed'));
-});
+$('.confirm-button').on('click', () => $('form').submit());
 
 $('#name').on('change', function() {
     const isValid = $(this).val().length > 1;

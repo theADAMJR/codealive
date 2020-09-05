@@ -1,0 +1,5 @@
+{
+  "from": "CodeAlive",
+  "subject": "Test Email",
+  "html": "<h1>Hello There!</h1><p>This is a test email for test purposes only!</p>"
+}

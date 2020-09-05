@@ -1,0 +1,24 @@
+doctype
+html(lang="en")
+  head
+    include includes/header
+
+    link(rel='stylesheet', href='/css/index.css')
+
+    script(src='/js/index.js', defer)
+  body
+    .jumbotron.text-center.bg-transparent.text-light
+      img.mb-2(src='/img/icon.png')
+      h1.display-4 Leave pug mailing list.
+      |
+      button.subscribe-button.center-content
+        span.button-description Unsubscribe
+        |
+        form(action='/unsubscribe', method='GET')
+          .form-header
+            | Newsletter
+          .description Leave pug mailing list.
+          input#email(type='email', placeholder='Email', name='email', value=email)
+          alert#formError.alert-danger
+          span.confirm-button Unsubscribe
+    include includes/footer
