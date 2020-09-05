@@ -1,0 +1,23 @@
+{
+  "name": "codealive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.3",
+    "nodemailer": "^6.4.11",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/mongoose": "^5.7.36",
+    "@types/nodemailer": "^6.4.0"
+  }
+}

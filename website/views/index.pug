@@ -1,0 +1,24 @@
+doctype
+html(lang="en")
+  head
+    include includes/header
+
+    link(rel='stylesheet', href='/css/index.css')
+
+    script(src='/js/index.js', defer)
+  body
+    .jumbotron.text-center.bg-transparent.text-light
+      img.mb-2(src='/img/icon.png')
+      h1.display-4 Join the mailing list.
+      div.badge.badge-success EARLY ACCESS
+      |
+      button.subscribe-button.center-content
+        span.button-description Subscribe
+      |
+      form
+        .form-header
+          | Newsletter
+        .description Lorem ipsum dor sit amet consectetur adipisicing elit.
+        input(type='text', placeholder='Name', name='')
+        input(type='text', placeholder='Email', name='')
+        span.confirm-button Subscribe
