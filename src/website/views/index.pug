@@ -1,0 +1,26 @@
+doctype
+html(lang="en")
+  head
+    include includes/header
+
+    link(rel='stylesheet', href='/css/index.css')
+
+    script(src='/js/index.js', defer)
+  body
+    .jumbotron.text-center.bg-transparent.text-light
+      img.mb-2(src='/img/icon.png')
+      h1.display-4 Join the mailing list.
+      |
+      button.subscribe-button.center-content
+        span.button-description Subscribe
+        |
+        form(action='/subscribe', method='POST')
+          .form-header
+            | Newsletter
+          .description Join the mailing list
+            div.badge.badge-success.ml-2 EARLY ACCESS
+          input#name(type='text', placeholder='Name', name='')
+          input#email(type='email', placeholder='Email', name='')
+          alert#formError.alert-danger
+          span.confirm-button Subscribe
+    include includes/footer

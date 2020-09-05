@@ -6,30 +6,34 @@ img {
   max-width: 256px;
 }
 
+.jumbotron {
+    margin-top: 20vh;
+}
+
 /* subscribe form */
 :root {
     --dark-color: #282c34;
     --light-color: #fff;
     --light-grey-color: #e0e0e0;
     --grey-color: hsl(0, 0%, 56%);
-    --blue-color: hsl(207, 90%, 61%);
+    --blue-color: #246bce;
 
     --button-font-size: 32px; 
     --button-vertical-padding: .6em;
     --button-horizontal-padding: 1.4em;
-    --button-color: hsl(240, 100%, 73%);
+    --button-color: #246bce;
     --button-hover-color: hsl(240, 85%, 65%);
 
     --subscribe-form-height: 500px;
     --subscribe-form-width: calc(var(--subscribe-form-height) * .7);
 
-    --form-color: hsl(240, 100%, 73%);
-    --form-dark-color: hsl(240, 90%, 67%);
+    --form-color: #246bce;
+    --form-dark-color: #246bce;
 }
 /* Button styling section */
 .center-content {
     position: absolute !important;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -43,7 +47,7 @@ img {
     background-color: var(--button-color);
     color: var(--light-color);
     border-radius: .25em;
-    outline: none;
+    outline: none !important;
     border: 0 none;
     cursor: pointer;
     overflow: hidden;
@@ -137,4 +141,8 @@ form .confirm-button {
 form .confirm-button:hover {
     cursor: pointer;
     background-color: var(--form-dark-color);
+}
+
+.alert {
+    transition: all 350ms ease-in-out;
 }

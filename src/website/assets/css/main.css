@@ -1,0 +1,13 @@
+footer {
+  color: white;
+  
+  position: fixed;
+  bottom: 0;
+  
+  padding: 0 5px;
+  width: 100vw;
+}
+
+footer .links {
+  font-size: x-large;
+}
