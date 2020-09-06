@@ -25,7 +25,7 @@ img {
     --button-hover-color: hsl(240, 85%, 65%);
 
     --subscribe-form-height: 500px;
-    --subscribe-form-width: calc(var(--subscribe-form-height) * .7);
+    --subscribe-form-width: calc(var(--subscribe-form-height) * .35);
 
     --form-color: #246bce;
     --form-dark-color: #246bce;
@@ -33,7 +33,7 @@ img {
 /* Button styling section */
 .center-content {
     position: absolute !important;
-    top: 60%;
+    top: 500px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
