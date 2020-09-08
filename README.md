@@ -1,5 +1,7 @@
-# codea.live
-![CodeAlive Logo](https://codea.live/img/logo.png)
+![CodeAlive](https://codea.live/img/logo.png)
+
+An basic projecct (for now), that allows you to subscribe to a newsletter then receive a welcome email.
+It also allows you to send emails with `npm run send-email`. Be sure to edit the email `.json` files to customize the email.
 
 `config.json`
 ```json
