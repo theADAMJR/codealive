@@ -1,0 +1,24 @@
+doctype
+html(lang='en')
+  head
+    include ../includes/header
+  body
+    include ../includes/navbar
+
+    .jumbotron.mt-0.py-4.bg-transparent.text-center
+      h1.display-3 Blog
+      p.lead CodeAlive blog.
+
+      hr
+
+      .container
+        .row
+          for blog of blogs
+            .col-3
+              .card
+                img.card-img-top(src=blog.imageURL ?? '/img/default-blog.png')
+                .card-body
+                  h5.card-title #{blog.title}
+                  p.card-text
+                    | #{blog.body.slice(0, 50)}...
+                  a.btn.btn-primary(href=blog.url) View

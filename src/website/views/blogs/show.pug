@@ -1,0 +1,21 @@
+doctype
+html(lang='en')
+  head
+    include ../includes/header
+
+    link(rel='stylesheet', href='/css/blog.css')
+
+    script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js', defer)
+  body
+    include ../includes/navbar
+
+    .jumbotron.mt-0.py-4.bg-transparent.text-center
+      h1.display-3 Blog
+      p.lead CodeAlive blog.
+
+      hr
+
+      .container
+        #markdown
+    script(defer).
+      $('#markdown').html(marked('# test'));

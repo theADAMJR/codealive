@@ -1,0 +1,26 @@
+doctype
+html(lang='en')
+  head
+    include ../includes/header
+
+    link(rel='stylesheet', href='/css/blog.css')
+  body
+    include ../includes/navbar
+
+    .jumbotron.mt-0.py-4.bg-transparent.text-center
+      h1.display-3 Blog
+      p.lead CodeAlive blog.
+
+      hr
+
+      .container
+        .row
+          for blog of blogs
+            .col-lg-6
+              a.card.my-2(href='/blog/' + blog._id)
+                .card-img
+                  img.card-img-top(src=blog.imageURL || '/img/default-blog.png')
+                .card-body
+                  h5.card-title #{blog.title}
+                  p.card-text
+                    | #{util.truncateWords(blog.body, 15)}...

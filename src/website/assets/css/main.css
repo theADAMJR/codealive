@@ -1,3 +1,16 @@
+:root {
+  --primary: #04A3E8;
+  --secondary: #090909;
+
+  --background-primary: #E3E6E6;
+  --background-secondary: #7C7C7C;
+  --background-tertiary: #4F4F4F;
+}
+
+body {
+  background-color: var(--background-primary);
+}
+
 footer {
   color: white;
   
@@ -10,4 +23,21 @@ footer {
 
 footer .links {
   font-size: x-large;
+}
+
+/* navbar */
+.navbar {
+  padding: 0 10px;
+  background-color: var(--background-tertiary);
+}
+.navbar .nav-link {
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.navbar img {
+  max-width: 64px;
+}
+
+.avatar {
+  max-height: 32px;
 }

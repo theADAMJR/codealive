@@ -1,0 +1,23 @@
+nav.navbar.navbar-expand-lg
+  a.navbar-brand(href='/') 
+    img(src='/img/icon.png')
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse.ml-1
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link(href='/blog') Blog
+    ul.navbar-nav.ml-auto
+      if user
+        li.nav-item
+        .dropdown
+          button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            a.nav-link
+              img.round.avatar.mt-1(src=user.avatar_url)
+              span.float-right #{user.login}
+          .dropdown-menu(aria-labelledby='dropdownMenuButton')
+            a.dropdown-item(href='/api/logout') Logout
+      else
+        li.nav-item
+          a.nav-link(href='/api/login') Login
+        

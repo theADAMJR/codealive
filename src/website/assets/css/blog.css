@@ -1,0 +1,26 @@
+.card img {
+  transition: transform .4s;
+  display: block;
+}
+
+a.card {
+  border: none;
+  transition: transform .2s;
+  text-decoration: none;
+
+  color: var(--font);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.card-img:hover img {
+  cursor: pointer;
+  transform: scale(1.35);
+}
