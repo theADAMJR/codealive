@@ -7,7 +7,7 @@ html(lang='en')
   body
     include ../includes/navbar
 
-    .jumbotron.mt-0.py-4.bg-transparent.text-center
+    .mt-0.py-4.bg-transparent.text-center
       h1.display-3 Blog
       p.lead CodeAlive blog.
 
@@ -24,3 +24,7 @@ html(lang='en')
                   h5.card-title #{blog.title}
                   p.card-text
                     | #{util.truncateWords(blog.body, 15)}...
+          .col-12.mt-2
+            if blogs.length <= 0
+              p No blogs found...
+            a.btn.bg-success.text-light(href='/blog/new') Create

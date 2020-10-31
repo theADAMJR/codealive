@@ -22,7 +22,7 @@ app.use(cookies.express(['39y21h7q2yew78t42t36482wet6gq847y12q']));
 app.use(express.static(`${__dirname}/assets`));
 app.locals.basedir = `${__dirname}/assets`;
 
-app.use(updateUser);
+app.get('*', updateUser);
 app.use('/', rootRoutes);
 app.use('/blog', blogRoutes);
 app.use('/api', authRoutes);

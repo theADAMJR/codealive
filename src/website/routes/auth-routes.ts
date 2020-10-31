@@ -7,7 +7,7 @@ router.get('/login', async (req, res) => res.redirect(loginURL));
 
 router.get('/auth', async (req, res) => {
   try {
-    const token = await getToken(req.query.code?.toString());
+    const token = await getToken(req.query.code?.toString());    
     res.cookie('token', token);
   } finally {
     res.redirect('/');    

@@ -5,20 +5,25 @@ html(lang='en')
   body
     include ../includes/navbar
 
-    .jumbotron.mt-0.py-4.bg-transparent.text-center
+    .mt-0.py-4.bg-transparent.text-center
       h1.display-3 Blog
       p.lead CodeAlive blog.
 
       hr
 
-      .container
-        .row
-          for blog of blogs
-            .col-3
-              .card
-                img.card-img-top(src=blog.imageURL ?? '/img/default-blog.png')
-                .card-body
-                  h5.card-title #{blog.title}
-                  p.card-text
-                    | #{blog.body.slice(0, 50)}...
-                  a.btn.btn-primary(href=blog.url) View
+    .container
+      form(action='/blog', method='POST')
+        .md-form
+          label Title
+          input.form-control(name='title', type='text', required)
+
+        .md-form
+          label Image URL
+          input.form-control(name='imageURL', type='url', required)
+
+        .md-form
+          label Body
+          textarea.form-control(name='body', required)
+        
+        .d-flex.justify-content-center.text-light
+          button.btn.bg-success Post
