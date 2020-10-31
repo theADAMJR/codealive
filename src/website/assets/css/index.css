@@ -6,7 +6,7 @@ img {
   max-width: 256px;
 }
 
-.jumbotron {
+.header {
     margin-top: 20vh;
 }
 
@@ -33,7 +33,7 @@ img {
 /* Button styling section */
 .center-content {
     position: absolute !important;
-    top: 500px;
+    top: 550px;
     left: 50%;
     transform: translate(-50%, -50%);
 }

@@ -25,6 +25,18 @@ footer .links {
   font-size: x-large;
 }
 
+/* styles */
+strong {
+  font-weight: 600;
+}
+.btn-secondary.dropdown-toggle:hover,
+.btn-secondary.dropdown-toggle:focus,
+.btn-secondary.dropdown-toggle,
+.btn-secondary dropdown-toggle {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
 /* navbar */
 .navbar {
   padding: 0 10px;

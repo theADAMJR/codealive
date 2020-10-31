@@ -5,18 +5,31 @@ html(lang='en')
 
     link(rel='stylesheet', href='/css/blog.css')
 
-    script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js', defer)
+    style.
+      .jumbotron img {
+        max-height: 325px;
+      }
+      .jumbotron {
+        height: 325px;
+      }
+
   body
     include ../includes/navbar
 
-    .mt-0.py-4.bg-transparent.text-center
-      h1.display-3 Blog
-      p.lead CodeAlive blog.
-
-      hr
-
+    .mt-0.pb-4.bg-transparent
+      .jumbotron.p-0
+        img.mr-3.float-left(src=blog.imageURL)
+        div
+          h1.display-2.pt-5 #{blog.title}
+          p.float-right.lead
+            +author(user, blog)
+          div
+            a.btn.bg-warning(href='/blog/' + blog._id + '/edit') Edit
+            form.d-inline(action='/blog/' + blog._id + '?_method=DELETE', method='POST')
+              button.btn.bg-danger(href='/blog/' + blog._id) Delete
       .container
-        #markdown blog.body
+        #markdown
 
+    script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js', defer)
     script(defer).
-      $('#markdown').html(marked($('#markdown').text()));
+      $(document).ready(() => $('#markdown').html(marked(`#{blog.body}`)));

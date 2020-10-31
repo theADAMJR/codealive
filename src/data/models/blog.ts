@@ -6,6 +6,7 @@ export interface BlogDocument extends Document {
   body: string;
   imageURL: string;
   authorId: string;
+  createdAt: Date;
 }
 
 export const SavedBlog = model<BlogDocument>('blog', new Schema({
@@ -13,5 +14,6 @@ export const SavedBlog = model<BlogDocument>('blog', new Schema({
   title: String,
   body: String,
   imageURL: String,
-  authorId: String
+  authorId: String,
+  createdAt: Date
 }));

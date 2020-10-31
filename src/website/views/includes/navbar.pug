@@ -14,7 +14,7 @@ nav.navbar.navbar-expand-lg
           button#dropdownMenuButton.p-0.pr-2.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             a.nav-link
               img.round.avatar.mt-1(src=user.avatar_url)
-              span.float-right #{user.login}
+              span.float-right.mt-2.ml-2 #{user.login}
           .dropdown-menu(aria-labelledby='dropdownMenuButton')
             a.dropdown-item(href='/api/logout') Logout
       else

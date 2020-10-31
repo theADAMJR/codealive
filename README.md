@@ -14,6 +14,11 @@
       "user": "",
       "pass": ""
     }
+  },
+  "authorizedUsers": [28284250],
+  "githubOAuth": {
+    "clientId": "",
+    "clientSecret": ""
   }
 }
 ```
