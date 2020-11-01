@@ -8,6 +8,7 @@ export const router = express.Router();
 const emailService = Deps.get<EmailService>(EmailService);
 
 router.get('/', (req, res) => res.render('index'));
+
 router.post('/subscribe', async (req, res) => {
   try {
     const savedEmail = await SavedEmail.create(req.body);

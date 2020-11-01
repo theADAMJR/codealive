@@ -1,3 +1,21 @@
+mixin metaTags(meta)
+  title #{meta ? meta.title : 'CodeAlive - Learn to Code Online'}
+  // Primary Meta Tags
+  meta(name='title', content=meta ? meta.title : 'CodeAlive - Learn to Code Online')
+  meta(name='description', content=meta ? meta.description : 'Learn to code online with CodeAlive.')
+  // Open Graph / Facebook
+  meta(property='og:type', content='website')
+  meta(property='og:url', content='https://codea.live/')
+  meta(property='og:title', content=meta ? meta.title : 'CodeAlive - Learn to Code Online')
+  meta(property='og:description', content=meta ? meta.description : 'Learn to code online with CodeAlive.')
+  meta(property='og:image', content='/img/logo.png')
+  // Twitter
+  meta(property='twitter:card', content='summary_large_image')
+  meta(property='twitter:url', content='https://codea.live/')
+  meta(property='twitter:title', content=meta ? meta.title : 'CodeAlive - Learn to Code Online')
+  meta(property='twitter:description', content=meta ? meta.description : 'Learn to code online with CodeAlive.')
+  meta(property='twitter:image', content='/img/logo.png')
+
 mixin author(user, blog)
   .card-body.border
     span By #[strong #{user.login}]
