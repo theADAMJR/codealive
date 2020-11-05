@@ -25,4 +25,4 @@ html(lang='en')
 
     script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js', defer)
     script(defer).
-      $(document).ready(() => $('#markdown').html(marked(`#{blog.body}`)));
+      $(() => $('#markdown').html(marked(`!{blog.body}`)));
