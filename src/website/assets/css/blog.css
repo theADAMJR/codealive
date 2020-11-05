@@ -24,3 +24,16 @@ a.card {
   cursor: pointer;
   transform: scale(1.35);
 }
+
+/* show */
+.jumbotron {
+  height: 325px;
+}
+.jumbotron img {
+  max-width: 325px;
+  max-height: 325px;
+  width: 512px;
+  height: 325px;
+  
+  object-fit: cover;
+}

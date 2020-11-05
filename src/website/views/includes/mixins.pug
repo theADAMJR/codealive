@@ -17,6 +17,6 @@ mixin metaTags(meta)
   meta(property='twitter:image', content='/img/logo.png')
 
 mixin author(user, blog)
-  .card-body.border
+  .card-body
     span By #[strong #{user.login}]
     span.text-muted.d-block At #[strong #{blog.createdAt.toDateString()}]
