@@ -3,6 +3,7 @@ import { BlogDocument, SavedBlog } from '../../data/models/blog';
 import { toKebabCase } from '../../utils/utils';
 import { validateBlogOwner, validateCanPost, validateUser } from '../modules/middleware';
 import marked from 'marked';
+import { highlightAuto } from 'highlight.js';
 
 export const router = express.Router();
 
@@ -36,7 +37,7 @@ router.get('/:id', async (req, res) => {
   if (!blog)
     return res.status(404).json({ code: 404, message: 'Blog not found.' });
 
-  res.render('blogs/show', { blog, parsedBody: marked(blog.body) });
+  res.render('blogs/show', { blog, parsedBody: highlightAuto(marked(blog.body)) });
 });
 
 router.put('/:id', validateUser, validateBlogOwner, async (req, res) => {
