@@ -2,10 +2,13 @@ import express from 'express';
 import { BlogDocument, SavedBlog } from '../../data/models/blog';
 import { toKebabCase } from '../../utils/utils';
 import { validateBlogOwner, validateCanPost, validateUser } from '../modules/middleware';
+import marked from 'marked';
 
 export const router = express.Router();
 
-router.get('/', async (req, res) => res.render('blogs/index', { blogs: await SavedBlog.find() }));
+router.get('/', async (req, res) => res.render('blogs/index', {
+  blogs: await SavedBlog.find()
+}));
 
 router.post('/', validateUser, validateCanPost, async (req, res) => {
   try {
@@ -33,7 +36,7 @@ router.get('/:id', async (req, res) => {
   if (!blog)
     return res.status(404).json({ code: 404, message: 'Blog not found.' });
 
-  res.render('blogs/show', { blog });
+  res.render('blogs/show', { blog, parsedBody: marked(blog.body) });
 });
 
 router.put('/:id', validateUser, validateBlogOwner, async (req, res) => {
