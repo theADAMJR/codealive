@@ -5,6 +5,10 @@ html(lang='en')
     +metaTags(blog)
 
     link(rel='stylesheet', href='/css/blog.css')
+
+    script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js', defer)
+    script(defer).
+      $(() => $('#markdown').html(marked(`!{JSON.stringify(blog.body)}`)));
   body
     include ../includes/navbar
 
@@ -22,7 +26,3 @@ html(lang='en')
                 button.btn.bg-danger(href='/blog/' + blog._id) Delete
       .container
         #markdown
-
-    script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js', defer)
-    script(defer).
-      $(() => $('#markdown').html(marked(`!{blog.body}`)));
