@@ -5,6 +5,12 @@ html(lang='en')
     +metaTags(blog)
 
     link(rel='stylesheet', href='/css/blog.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/arta.min.css')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js', defer)
+    script(defer).
+      hljs.initHighlightingOnLoad();
+
   body
     include ../includes/navbar
 
