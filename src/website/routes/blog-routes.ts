@@ -44,7 +44,7 @@ router.get('/:id', async (req, res) => {
   if (!blog)
     return res.status(404).json({ code: 404, message: 'Blog not found.' });
 
-  res.render('blogs/show', { blog, parsedBody: marked(hljs.highlightAuto(blog.body)).value });
+  res.render('blogs/show', { blog, parsedBody: marked(hljs.highlightAuto(blog.body).value) });
 });
 
 router.put('/:id', validateUser, validateBlogOwner, async (req, res) => {
