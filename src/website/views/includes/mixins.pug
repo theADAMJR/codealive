@@ -18,5 +18,5 @@ mixin metaTags(meta)
 
 mixin author(user, blog)
   .card-body
-    span By #[strong #{(user || { login: 'Unknown' }).login}]
+    span By #[strong #{blog.authorId}]
     span.text-muted.d-block At #[strong #{blog.createdAt.toDateString()}]
