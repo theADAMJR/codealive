@@ -2,17 +2,9 @@ import express from 'express';
 import { BlogDocument, SavedBlog } from '../../data/models/blog';
 import { toKebabCase } from '../../utils/utils';
 import { validateBlogOwner, validateCanPost, validateUser } from '../modules/middleware';
-// import hljs from 'highlight.js';
 import marked from 'marked';
 
 export const router = express.Router();
-
-marked.setOptions({
-  highlight: (code, lang, _callback) =>
-    (hljs.getLanguage(lang))
-      ? hljs.highlight(lang, code).value
-      : hljs.highlightAuto(code).value
-});
 
 router.get('/', async (req, res) => res.render('blogs/index', {
   blogs: await SavedBlog.find()
